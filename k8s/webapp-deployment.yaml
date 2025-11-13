@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-ui-deployment
+  namespace: as-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp-ui
+  template:
+    metadata:
+      labels:
+        app: webapp-ui
+    spec:
+      containers:
+        - name: webapp-ui
+          image: webapp-ui:1.0   # TODO: ajustar con el nombre real de la imagen
+          ports:
+            - containerPort: 8080
+          env:
+            - name: AUTH_API_BASEURL
+              value: "http://authapi-svc.as-auth.svc.cluster.local" # TODO: ajustar al nombre real del service del back
