@@ -1,23 +1,30 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApp.UI.Services;
 
 namespace WebApp.UI.Controllers
 {
     public class AccountController : Controller
     {
-        // TODO: inyectar HttpClient e IConfiguration para hablar con Auth.Api
+        private readonly IAuthApiClient _authApi;
+
+        public AccountController(IAuthApiClient authApi)
+        {
+            _authApi = authApi;
+        }
 
         [HttpGet]
         public IActionResult Login()
         {
-            // TODO: devolver vista de login
             return View();
         }
 
         [HttpPost]
-        public IActionResult Login(string userName, string password)
+        public async Task<IActionResult> Login(string userName, string password)
         {
-            // TODO: consumir Auth.Api vía HttpClient y validar credenciales
-            // TODO: mostrar mensaje de éxito o error en la vista
+            var result = await _authApi.LoginAsync(userName, password);
+
+            ViewBag.Message = result.Message;
+            ViewBag.IsSuccess = result.Success;
 
             return View();
         }
