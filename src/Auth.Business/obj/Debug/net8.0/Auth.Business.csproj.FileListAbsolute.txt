@@ -1,0 +1,13 @@
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.AssemblyInfoInputs.cache
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.AssemblyInfo.cs
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.csproj.CoreCompileInputs.cache
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.sourcelink.json
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\bin\Debug\net8.0\Auth.Business.deps.json
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\bin\Debug\net8.0\Auth.Business.dll
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\bin\Debug\net8.0\Auth.Business.pdb
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.csproj.AssemblyReference.cache
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.dll
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\refint\Auth.Business.dll
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\Auth.Business.pdb
+C:\Users\aleca\Downloads\AS-Auth.Net\src\Auth.Business\obj\Debug\net8.0\ref\Auth.Business.dll

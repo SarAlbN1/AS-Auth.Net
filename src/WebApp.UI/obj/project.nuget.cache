@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "h+DxejeS3nY=",
+  "dgSpecHash": "ZcAGbxnk+f0=",
   "success": true,
-  "projectFilePath": "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/WebApp.UI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\WebApp.UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.21\\microsoft.netcore.app.host.win-x64.8.0.21.nupkg.sha512"
+  ],
   "logs": []
 }
