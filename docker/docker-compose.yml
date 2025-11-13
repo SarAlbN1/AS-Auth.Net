@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  auth-mysql:
+    image: mysql:8.0
+    container_name: auth-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: auth_db
+      MYSQL_USER: auth_user
+      MYSQL_PASSWORD: auth_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - auth-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  auth-api:
+    build:
+      context: ..
+      dockerfile: docker/Auth.Api.Dockerfile
+    container_name: auth-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__AuthDatabase: Server=auth-mysql;Port=3306;Database=auth_db;User=auth_user;Password=auth_password;TreatTinyAsBoolean=false;
+    depends_on:
+      auth-mysql:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+volumes:
+  auth-mysql-data:

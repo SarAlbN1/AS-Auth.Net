@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/WebApp.UI.csproj": {}
+    "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\WebApp.UI.csproj": {}
   },
   "projects": {
-    "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/WebApp.UI.csproj": {
+    "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\WebApp.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/WebApp.UI.csproj",
+        "projectUniqueName": "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\WebApp.UI.csproj",
         "projectName": "WebApp.UI",
-        "projectPath": "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/WebApp.UI.csproj",
-        "packagesPath": "/Users/saraalbarracin/.nuget/packages/",
-        "outputPath": "/Users/saraalbarracin/Projects/VSCode/AS-Auth.Net/src/WebApp.UI/obj/",
+        "projectPath": "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\WebApp.UI.csproj",
+        "packagesPath": "C:\\Users\\aleca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\WebApp.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/saraalbarracin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\aleca\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -53,6 +54,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -61,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

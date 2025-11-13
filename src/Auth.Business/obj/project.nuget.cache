@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VqH23OnLMd8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aleca\\Downloads\\AS-Auth.Net\\src\\Auth.Business\\Auth.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
+    "C:\\Users\\aleca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}
