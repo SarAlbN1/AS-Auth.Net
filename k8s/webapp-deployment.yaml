@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: webapp-ui
-          image: webapp-ui:1.0   # TODO: ajustar con el nombre real de la imagen
+          image: webapp-ui:1.0
           ports:
             - containerPort: 8080
           env:
-            - name: AUTH_API_BASEURL
-              value: "http://authapi-svc.as-auth.svc.cluster.local" # TODO: ajustar al nombre real del service del back
+            - name: AuthApi__BaseUrl
+              value: "http://authapi-svc.as-auth.svc.cluster.local"

@@ -10,4 +10,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30080  # TODO: ajustar si el profe pide otro puerto
+      nodePort: 30080
