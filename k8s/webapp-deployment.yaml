@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: webapp-ui
-          image: webapp-ui:1.0
+          image: docker-webapp-ui:latest
           ports:
             - containerPort: 8080
           env:
             - name: AuthApi__BaseUrl
-              value: "http://authapi-svc.as-auth.svc.cluster.local"
+              value: "http://auth-api.as-auth.svc.cluster.local"
