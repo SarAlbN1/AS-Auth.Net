@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-ui-deployment
+  namespace: as-auth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp-ui
+  template:
+    metadata:
+      labels:
+        app: webapp-ui
+    spec:
+      containers:
+        - name: webapp-ui
+          image: docker-webapp-ui:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: AuthApi__BaseUrl
+              value: "http://auth-api.as-auth.svc.cluster.local"
