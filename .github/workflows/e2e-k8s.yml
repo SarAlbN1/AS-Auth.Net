@@ -1,0 +1,52 @@
+name: E2E tests on K8s
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'latest'
+
+      - name: Configure Kubeconfig
+        # This step expects the workflow to be configured with cluster credentials
+        run: |
+          echo "Please configure cluster credentials as secrets and set KUBECONFIG in the job environment."
+
+      - name: Apply manifests
+        run: |
+          kubectl apply -f k8s/namespace.yaml || true
+          kubectl apply -f k8s/mysql-statefulset.yaml
+          kubectl apply -f k8s/auth-api-deployment.yaml
+          kubectl apply -f k8s/webapp-deployment.yaml
+          kubectl apply -f k8s/webapp-service.yaml
+
+      - name: Wait for pods
+        run: |
+          kubectl wait --for=condition=ready pod -l app=auth-mysql --timeout=120s || true
+          kubectl wait --for=condition=ready pod -l app=auth-api --timeout=120s || true
+          kubectl wait --for=condition=ready pod -l app=webapp-ui --timeout=120s || true
+
+      - name: Port-forward webapp service
+        run: |
+          kubectl port-forward svc/webapp-ui 8081:80 &
+          sleep 5
+
+      - name: Run E2E login script
+        env:
+          BASE_URL: http://127.0.0.1:8081
+          E2E_USERNAME: ${{ secrets.E2E_USERNAME }}
+          E2E_PASSWORD: ${{ secrets.E2E_PASSWORD }}
+        run: |
+          chmod +x ./tests/e2e/run-login.sh
+          ./tests/e2e/run-login.sh
